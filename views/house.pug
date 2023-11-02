@@ -11,9 +11,17 @@ block content
           { House_address:'218 coldenhall', House_colour:'white',House_capacity:5 },
           { House_address:'415 N mulberry', House_colour:'Blue',House_capacity:20 }
         ]
-    each item in results
+    each item, index in results
         .col-sm-2
-            h3 House
+            div(onclick=`buy(${index})`)
             p #{item.House_address}, #{item.House_colour},#{item.House_capacity}
+            
 
   a(href='http://localhost:3000/') Link to Index
+
+    
+
+  script.
+     function buy(x) {
+      alert(`You purchased item ${x}`);
+     } 
