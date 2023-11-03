@@ -13,11 +13,12 @@ block content
         ]
     each item, index in results
         .col-sm-2
-            div(onclick=`buy(${index})`)
+            h3 House
             p #{item.House_address}, #{item.House_colour},#{item.House_capacity}
+            a(href='http://localhost:3000/', onclick=`buy(${index})`) Link to Index
             
 
-  a(href='http://localhost:3000/') Link to Index
+  
 
     
 
